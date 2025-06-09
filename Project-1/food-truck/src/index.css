@@ -1,26 +1,7 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
@@ -28,11 +9,62 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #a4edea;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.App {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.Header {
+  margin-top: 0px;
+}
+
+.Card {
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  font-size: medium;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  text-align: center;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 490px;
+}
+
+.Card img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Card h3 {
+  margin-top: 10px;
+  padding: 0px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.Card h4 {
+  margin-bottom: 35px;
+  max-width: auto;
+  max-height: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #000000;
+
+}
+
+.Container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 button {
@@ -42,27 +74,22 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ff0000;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: white;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0 10px rgb(178, 178, 178);
+} 
+button:active {
+  background-color: #ff0000;
+
+}
+
+h1 {
+  margin-top: 5px;
+  font-size: 75px;
+  text-shadow: 1px -1px 10px rgb(0, 0, 0);
 }
