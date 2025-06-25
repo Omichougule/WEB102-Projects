@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Card from './components/Card';
+import stringSimilarity from 'string-similarity';
 
 function App() {
   const [cards, setCards] = useState([
@@ -134,6 +135,36 @@ function App() {
     hard: "pink"
   };
 
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  const checkAnswer = () => {
+    // Get the correct answer for the current card
+    const correctAnswer = cards[index].answer.toLowerCase();
+
+    // Convert user input to lowercase for case-insensitive comparison
+    const guess = userInput.toLowerCase();
+
+    // Calculate the similarity between the guess and correct answer
+    const similarity = stringSimilarity.compareTwoStrings(guess, correctAnswer);
+
+    // Set a threshold for similarity (adjust as needed)
+    const similarityThreshold = 0.8;
+
+    // Check if the similarity meets the threshold
+    const isCorrectGuess = similarity >= similarityThreshold;
+
+    // Apply appropriate CSS class based on correctness of the guess
+    const newInputClass = isCorrectGuess ? 'correct' : 'incorrect';
+
+    // Update the inputClass state variable
+    setInputClass(newInputClass);
+
+    // Clear the input field after submission
+    setUserInput('');
+  };
+
 
 
   const handleShuffle = () => {
@@ -154,6 +185,18 @@ function App() {
         isFlipped={isFlipped}
         checkIsFlipped={checkIsFlipped}
         color={difficultyColors[cards[index].difficulty]} />
+      
+      <div className='guess-area'>
+        <p>Make your guess here: </p>
+        <input
+          type='text'
+          name='answer'
+          value={userInput}
+          placeholder='Answer'
+          onChange={handleInputChange}
+          className={`guess-input ${inputClass}`}></input>
+        <button id='submit' onClick={checkAnswer}>Submit</button>
+      </div>
       
       <button id="prev" onClick={handlePrevSwitchCard} > ← </button>
       <button id="next" onClick={handleSwitchCard}> → </button>
