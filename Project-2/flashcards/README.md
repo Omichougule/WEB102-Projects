@@ -1,14 +1,15 @@
-# Web Development Project 2 - *Flashcards*
+# Web Development Project 2 and 3 - *Flashcards*
 
 Submitted by: **Omkar Chougule**
 
 This web app: **Explore Famous Landmarks Flashcards**
 
-Time spent: **6** hours spent in total
+Time spent Project 2: **6** hours spent in total
+Time spent Project 3: **6** hours spent in total
 
-## Required Features
+## Required Features - Project 2
 
-The following **required** functionality is completed:
+The following **required** functionality is completed for Project 2:
 
 
 - [✅] **The app displays the title of the card set, a short description, and the total number of cards**
@@ -38,15 +39,51 @@ The following **additional** features are implemented:
 * [✅] List anything else that you added to improve the site's functionality!
 * [✅] Shuffle button added which shuffles the whole deck.
 
+## Required Features - Project 3
+
+The following **required** functionality is completed for Project 3:
+
+- [✅] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - Application features a clearly labeled input box with a submit button where users can type in a guess
+  - Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong 
+  -  Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [✅] **The user can navigate through an ordered list of cardss**
+  - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
+
+The following **optional** features are implemented:
+
+
+- [✅] Users can use a shuffle button to randomize the order of the cards
+  - Cards should remain in the same sequence (**NOT** randomized) unless the shuffle button is clicked 
+  - Cards should change to a random sequence once the shuffle button is clicked
+- [✅] A user’s answer may be counted as correct even when it is slightly different from the target answer
+  - Answers are considered correct even if they only partially match the answer on the card 
+  - Examples: ignoring uppercase/lowercase discrepancies, ignoring punctuation discrepancies, matching only for a particular part of the answer rather than the whole answer
+- [ ] A counter displays the user’s current and longest streak of correct responses
+  - The current counter increments when a user guesses an answer correctly
+  - The current counter resets to 0 when a user guesses an answer incorrectly
+  - A separate counter tracks the longest streak, updating if the value of the current streak counter exceeds the value of the longest streak counter 
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+  - The user can mark a card to indicate that it has been mastered
+  - Mastered cards are removed from the pool of displayed cards and added to a list of mastered cards
+
+
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented required features for Project 2:
 
 <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/35c38b4b621d4dd59647d32ccf327683-09d49d4d352fad6c-full-play.gif">
-    
+
+
+Here's a walkthrough of implemented required features for Project 3:
+
+
+<img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f4ae92b50f904965b314a1fcfe07a676-0ba07016db8cc0ed-full-play.gif">
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with Loom 
+GIFs created with Loom 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
