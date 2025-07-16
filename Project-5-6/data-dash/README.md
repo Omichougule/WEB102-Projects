@@ -43,7 +43,7 @@ Here's a walkthrough of implemented user stories:
 <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f09daa8b581c41fea36cd62f6b990776-9f6f3556f9406027-full-play.gif">
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with Loom
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
